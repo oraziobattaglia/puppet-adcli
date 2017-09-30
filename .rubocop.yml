@@ -7,18 +7,13 @@
 
 AllCops:
   Include:
-    - '**/*.gemspec'
-    - '**/*.rake'
     - '**/Gemfile'
-    - '**/Puppetfile'
     - '**/Rakefile'
-    - '**/Guardfile'
   Exclude:
     - 'modules/**/*'
     - 'pkg/**/*'
     - 'spec/fixtures/**/*'
     - 'vendor/**/*'
-  RunRailsCops: false
   DisplayCopNames: true
 
 Metrics/LineLength:

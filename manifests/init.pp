@@ -48,12 +48,10 @@ class adcli (
   $ad_join_ou              = $adcli::params::ad_join_ou,
 ) inherits adcli::params {
 
-  validate_string(
-    $ad_domain,
-    $ad_join_username,
-    $ad_join_password,
-    $ad_join_ou
-  )
+  validate_legacy(String, 'validate_string', $ad_domain)
+  validate_legacy(String, 'validate_string', $ad_join_username)
+  validate_legacy(String, 'validate_string', $ad_join_password)
+  validate_legacy(String, 'validate_string', $ad_join_ou)
 
   anchor { 'adcli::begin': } ->
   class { '::adcli::install': } ->

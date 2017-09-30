@@ -21,7 +21,6 @@ describe 'adcli' do
     context 'with defaults for all parameters' do
       it { is_expected.to contain_class('adcli::install') }
       it { is_expected.to contain_class('adcli::join') }
-
       it { is_expected.to contain_package('adcli').with_ensure('present') }
       it { is_expected.to contain_exec('adcli_join') }
     end
@@ -48,7 +47,6 @@ describe 'adcli' do
     context 'with defaults for all parameters' do
       it { is_expected.to contain_class('adcli::install') }
       it { is_expected.to contain_class('adcli::join') }
-
       it { is_expected.to contain_package('adcli').with_ensure('present') }
       it { is_expected.to contain_exec('adcli_join') }
     end

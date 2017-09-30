@@ -35,22 +35,22 @@ class {'::adcli':
 
 ## Reference
 
-#####`ad_domain`
+`ad_domain`
 Defines the Active Directory domain to join
 Type: string
 Default: undef
 
-#####`ad_join_username`
+`ad_join_username`
 Defines the Active Directory username to use during domain join operations.
 Type: string
 Default: undef
 
-#####`$ad_join_password`
+`$ad_join_password`
 Defines the Active Directory password to use during domain join operations. hiera-eyaml should be used for secure storage of this password.
 Type: string
 Default: undef
 
-#####`$ad_join_ou`
+`$ad_join_ou`
 Defines the Active Directory organizational unit to use during domain join operations.
 Type: string
 Default: undef
