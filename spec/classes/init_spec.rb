@@ -7,6 +7,7 @@ describe 'adcli' do
         operatingsystemrelease: '6.7',
         operatingsystemmajrelease: '6',
         rubyversion: '1.9.3',
+        osname: "CentOS",
       }
     end
     let(:params) do
@@ -15,6 +16,9 @@ describe 'adcli' do
         ad_join_username: 'userid',
         ad_join_password: 'secret',
         ad_join_ou: 'cn=computers,dn=ad,dn=example,dn=com',
+        ad_join_os: 'RedHat',
+        ad_join_os_version: '6',
+        ad_join_os_service_pack: '7',
       }
     end
 
@@ -41,6 +45,9 @@ describe 'adcli' do
         ad_join_username: 'userid',
         ad_join_password: 'secret',
         ad_join_ou: 'cn=computers,dn=ad,dn=example,dn=com',
+        ad_join_os: 'RedHat',
+        ad_join_os_version: '7',
+        ad_join_os_service_pack: '2',
       }
     end
 
