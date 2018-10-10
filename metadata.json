@@ -1,5 +1,5 @@
 {
-  "name": "puppet-adcli",
+  "name": "acjohnson-adcli",
   "version": "0.0.2",
   "author": "Aaron Johnson",
   "summary": "Install adcli package and Join Active Directory using adcli",
@@ -7,28 +7,45 @@
   "source": "git://github.com/acjohnson/puppet-adcli.git",
   "project_page": "https://github.com/acjohnson/puppet-adcli",
   "issues_url": "https://github.com/acjohnson/puppet-adcli/issues",
-  "tags": ["adcli", "sssd", "authentication", "ldap", "active-directory", "ad", "freeipa", "ipa"],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 2.3.0 < 5.0.0"
+    }
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": ["6","7"]
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
     },
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease": ["6","7"]
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
     }
   ],
   "requirements": [
-    {
-      "name": "pe",
-      "version_requirement": ">= 3.3.0 < 5.0.0"
-    },
     {
       "name": "puppet",
       "version_requirement": ">= 3.0.0 < 5.0.0"
     }
   ],
-  "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 2.3.0 < 5.0.0"}
-  ]
+  "tags": [
+    "adcli",
+    "sssd",
+    "authentication",
+    "ldap",
+    "active-directory",
+    "ad",
+    "freeipa",
+    "ipa"
+  ],
+  "pdk-version": "1.7.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.7.1-0-g810b982"
 }
