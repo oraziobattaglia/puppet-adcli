@@ -55,6 +55,21 @@ Defines the Active Directory organizational unit to use during domain join opera
 Type: string
 Default: undef
 
+`$ad_join_os`
+(optional) Populates the Active Directory value for Operating System Name.
+Type: string
+Default: undef
+
+`$ad_join_os_version`
+(optional) Populates the Active Directory value for Operating System Version.
+Type: string
+Default: undef
+
+`$ad_join_os_service_pack`
+(optional) Populates the Active Directory value for Operating System Version.
+Type: string
+Default: undef
+
 ## Limitations
 
 Tested on:
