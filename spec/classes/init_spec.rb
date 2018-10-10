@@ -7,7 +7,7 @@ describe 'adcli' do
         operatingsystemrelease: '6.7',
         operatingsystemmajrelease: '6',
         rubyversion: '1.9.3',
-        osname: "CentOS",
+        osname: 'CentOS',
       }
     end
     let(:params) do
