@@ -66,7 +66,7 @@ Type: string
 Default: undef
 
 `$ad_join_os_service_pack`
-(optional) Populates the Active Directory value for Operating System Version.
+(optional) Populates the Active Directory value for Operating System Service Pack.
 Type: string
 Default: undef
 
