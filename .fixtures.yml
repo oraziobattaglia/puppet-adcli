@@ -1,5 +1,7 @@
 fixtures:
-  repositories:
-    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
-  symlinks:
-    adcli: "#{source_dir}"
+  forge_modules:
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "4.13.0"
+      
+    

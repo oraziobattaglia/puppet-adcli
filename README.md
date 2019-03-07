@@ -33,6 +33,34 @@ class {'::adcli':
 
 ```
 
+With optional parameters:
+```puppet
+class {'::adcli':
+  ad_domain                 => 'ad.example.com',
+  ad_join_username          => 'username',
+  ad_join_password          => 'secret',
+  ad_join_ou                => 'ou=container,dc=example,dc=com',
+  ad_join_domain_controller => 'dc01.example.com',
+  ad_join_os                => 'CentOS',
+  ad_join_os_version        => '7',
+  ad_join_os_service_pack   => '6'
+}
+
+```
+
+Using hiera:
+```yaml
+adcli::ad_domain: 'ad.example.com'
+adcli::ad_join_username: 'username'
+adcli::ad_join_password: 'secret'
+adcli::ad_join_ou: 'ou=container,dc=example,dc=com'
+adcli::ad_join_domain_controller: 'dc01.example.com'
+adcli::ad_join_os: 'CentOS'
+adcli::ad_join_os_version: '7'
+adcli::ad_join_os_service_pack: '6'
+```
+
+
 ## Reference
 
 `ad_domain`
@@ -52,6 +80,11 @@ Default: undef
 
 `$ad_join_ou`
 Defines the Active Directory organizational unit to use during domain join operations.
+Type: string
+Default: undef
+
+`$ad_join_domain_controller`
+(optional) Specify which domain controller to use during the join operation.
 Type: string
 Default: undef
 

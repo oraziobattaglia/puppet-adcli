@@ -42,19 +42,20 @@
 # Copyright 2016 Aaron Johnson
 #
 class adcli (
-  $ad_domain               = $adcli::params::ad_domain,
-  $ad_join_username        = $adcli::params::ad_join_username,
-  $ad_join_password        = $adcli::params::ad_join_password,
-  $ad_join_ou              = $adcli::params::ad_join_ou,
-  $ad_join_os              = $adcli::params::ad_join_os,
-  $ad_join_os_version      = $adcli::params::ad_join_os_version,
-  $ad_join_os_service_pack = $adcli::params::ad_join_os_service_pack,
+  $ad_domain                 = $adcli::params::ad_domain,
+  $ad_join_username          = $adcli::params::ad_join_username,
+  $ad_join_password          = $adcli::params::ad_join_password,
+  $ad_join_ou                = $adcli::params::ad_join_ou,
+  $ad_join_domain_controller = $adcli::params::ad_join_domain_controller,
+  $ad_join_os                = $adcli::params::ad_join_os,
+  $ad_join_os_version        = $adcli::params::ad_join_os_version,
+  $ad_join_os_service_pack   = $adcli::params::ad_join_os_service_pack,
 ) inherits adcli::params {
-
   validate_legacy(String, 'validate_string', $ad_domain)
   validate_legacy(String, 'validate_string', $ad_join_username)
   validate_legacy(String, 'validate_string', $ad_join_password)
   validate_legacy(String, 'validate_string', $ad_join_ou)
+  validate_legacy(String, 'validate_string', $ad_join_domain_controller)
   validate_legacy(String, 'validate_string', $ad_join_os)
   validate_legacy(String, 'validate_string', $ad_join_os_version)
   validate_legacy(String, 'validate_string', $ad_join_os_service_pack)
