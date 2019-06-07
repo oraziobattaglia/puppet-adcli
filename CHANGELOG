@@ -1,4 +1,6 @@
+2019-03-07 (0.1.0)
+  * Add support for --domain-controller option
 2017-09-30 (0.0.2)
-        * Puppet 4x fixes
+  * Puppet 4x fixes
 2016-07-07 (0.0.1)
 	* First release

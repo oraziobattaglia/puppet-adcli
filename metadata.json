@@ -1,6 +1,6 @@
 {
   "name": "acjohnson-adcli",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "Aaron Johnson",
   "summary": "Install adcli package and Join Active Directory using adcli",
   "license": "GPL-3.0+",
