@@ -10,6 +10,7 @@ class adcli::join (
   $ad_join_password          = $adcli::ad_join_password,
   $ad_join_ou                = $adcli::ad_join_ou,
   $ad_join_domain_controller = $adcli::ad_join_domain_controller,
+  $ad_join_service_names     = $adcli::ad_join_service_names,
   $ad_join_os                = $adcli::ad_join_os,
   $ad_join_os_version        = $adcli::ad_join_os_version,
   $ad_join_os_service_pack   = $adcli::ad_join_os_service_pack
@@ -33,6 +34,11 @@ class adcli::join (
     } else {
       $ad_join_domain_controller_command = ''
     }
+    if $ad_join_service_names != [] {
+        $ad_join_service_names_comand = " --service-name='" . join($ad_join_service_names, "--service-name='") . "'"
+    } else {
+      $ad_join_service_names_comand = ''
+    }
     if $ad_join_os != undef {
       $ad_join_os_command = " --os-name=\'${ad_join_os}\'"
     } else {
@@ -51,7 +57,7 @@ class adcli::join (
     exec {'adcli_join':
       command   => "/bin/echo -n \'${ad_join_password}\' | /usr/sbin/adcli join ${ad_join_domain_controller_command} --login-user=\'${ad_join_username}\' \
 --domain=\'${ad_domain}\' --domain-ou=\'${ad_join_ou}\' --stdin-password --verbose ${ad_join_os_command} \
-${ad_join_os_version_command} ${ad_join_os_service_pack_command}",
+${ad_join_os_version_command} ${ad_join_os_service_pack_command} ${ad_join_service_names_comand}",
       logoutput => true,
       creates   => '/etc/krb5.keytab',
     }
