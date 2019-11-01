@@ -35,7 +35,7 @@ class adcli::join (
       $ad_join_domain_controller_command = ''
     }
     if $ad_join_service_names != [] {
-        $ad_join_service_names_comand = " --service-name='" . join($ad_join_service_names, "--service-name='") . "'"
+        $ad_join_service_names_comand = join([" --service-name='", join($ad_join_service_names, "' --service-name='"), "'"], '')
     } else {
       $ad_join_service_names_comand = ''
     }
