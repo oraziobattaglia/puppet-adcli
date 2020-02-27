@@ -1,0 +1,16 @@
+{
+  "CHANGELOG": "f6c087c60ce6ed9dd544669b93839431",
+  "Gemfile": "055e46bc936f2cdad7bc0529b9e87837",
+  "LICENSE": "84dcc94da3adb52b53ae4fa38fe49e5d",
+  "README.md": "c3001979ec872013df2061ad9d84bc76",
+  "Rakefile": "d1333a5656bcb8ad1304e353da2864fc",
+  "manifests/init.pp": "0f9f7d9f9ad24fa771d73cf32ea7c124",
+  "manifests/install.pp": "a81a240c18ad9a8fdc869f8b4c784e73",
+  "manifests/join.pp": "26ba7e4746413f77f88164dda2fafc9f",
+  "manifests/params.pp": "bc6a894ae15882b6c8950a8e81a86150",
+  "metadata.json": "4ead47b91f7da6990f749463804d32bb",
+  "spec/classes/init_spec.rb": "43a3b48f80798e3d8e4322a551a169e2",
+  "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+  "spec/spec_helper.rb": "61927a615456b3b3b1251833c78a8905",
+  "tests/test.pp": "fa7b5c5231e27c65272262507df03c3c"
+}
