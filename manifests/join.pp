@@ -55,9 +55,9 @@ class adcli::join (
       $ad_join_os_service_pack_command = ''
     }
     exec {'adcli_join':
-      command   => "/bin/echo -n \'${ad_join_password}\' | /usr/sbin/adcli join ${ad_join_domain_controller_command} ${ad_join_computer_name_command} --login-user=\'${ad_join_username}\' \
---domain=\'${ad_domain}\' --domain-ou=\'${ad_join_ou}\' --stdin-password --verbose ${ad_join_os_command} \
-${ad_join_os_version_command} ${ad_join_os_service_pack_command}",
+      command   => "/bin/echo -n \'${ad_join_password}\' | /usr/sbin/adcli join ${ad_join_domain_controller_command} \
+${ad_join_computer_name_command} --login-user=\'${ad_join_username}\' --domain=\'${ad_domain}\' --domain-ou=\'${ad_join_ou}\' \
+--stdin-password --verbose ${ad_join_os_command} ${ad_join_os_version_command} ${ad_join_os_service_pack_command}",
       logoutput => true,
       creates   => '/etc/krb5.keytab',
     }
