@@ -41,6 +41,7 @@ class {'::adcli':
   ad_join_password          => 'secret',
   ad_join_ou                => 'ou=container,dc=example,dc=com',
   ad_join_domain_controller => 'dc01.example.com',
+  ad_join_computer_name     => 'TEST-CENTOS-76',
   ad_join_os                => 'CentOS',
   ad_join_os_version        => '7',
   ad_join_os_service_pack   => '6'
@@ -55,6 +56,7 @@ adcli::ad_join_username: 'username'
 adcli::ad_join_password: 'secret'
 adcli::ad_join_ou: 'ou=container,dc=example,dc=com'
 adcli::ad_join_domain_controller: 'dc01.example.com'
+adcli::ad_join_computer_name: 'TEST-CENTOS-76'
 adcli::ad_join_os: 'CentOS'
 adcli::ad_join_os_version: '7'
 adcli::ad_join_os_service_pack: '6'
@@ -85,6 +87,12 @@ Default: undef
 
 `$ad_join_domain_controller`
 (optional) Specify which domain controller to use during the join operation.
+Type: string
+Default: undef
+
+`$ad_join_computer_name`
+(optional) Specify a custom computer name to use during the join operation.  This equates to the
+sAMAccountName property in Active Directory.
 Type: string
 Default: undef
 

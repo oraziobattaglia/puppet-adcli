@@ -47,6 +47,7 @@ class adcli (
   $ad_join_password          = $adcli::params::ad_join_password,
   $ad_join_ou                = $adcli::params::ad_join_ou,
   $ad_join_domain_controller = $adcli::params::ad_join_domain_controller,
+  $ad_join_computer_name     = $adcli::params::ad_join_computer_name,
   $ad_join_os                = $adcli::params::ad_join_os,
   $ad_join_os_version        = $adcli::params::ad_join_os_version,
   $ad_join_os_service_pack   = $adcli::params::ad_join_os_service_pack,
@@ -56,6 +57,7 @@ class adcli (
   validate_legacy(String, 'validate_string', $ad_join_password)
   validate_legacy(String, 'validate_string', $ad_join_ou)
   validate_legacy(String, 'validate_string', $ad_join_domain_controller)
+  validate_legacy(String, 'validate_string', $ad_join_computer_name)
   validate_legacy(String, 'validate_string', $ad_join_os)
   validate_legacy(String, 'validate_string', $ad_join_os_version)
   validate_legacy(String, 'validate_string', $ad_join_os_service_pack)
