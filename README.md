@@ -41,11 +41,8 @@ class {'::adcli':
   ad_join_password          => 'secret',
   ad_join_ou                => 'ou=container,dc=example,dc=com',
   ad_join_domain_controller => 'dc01.example.com',
-<<<<<<< HEAD
   ad_join_service_names     => ['spn1', 'spn2']
-=======
   ad_join_computer_name     => 'TEST-CENTOS-76',
->>>>>>> 8edab72979028d0ffa8ab192149429f6050cf08a
   ad_join_os                => 'CentOS',
   ad_join_os_version        => '7',
   ad_join_os_service_pack   => '6'
@@ -60,13 +57,10 @@ adcli::ad_join_username: 'username'
 adcli::ad_join_password: 'secret'
 adcli::ad_join_ou: 'ou=container,dc=example,dc=com'
 adcli::ad_join_domain_controller: 'dc01.example.com'
-<<<<<<< HEAD
 adcli::ad_join_service_names:
   - spn1
   - spn2
-=======
 adcli::ad_join_computer_name: 'TEST-CENTOS-76'
->>>>>>> 8edab72979028d0ffa8ab192149429f6050cf08a
 adcli::ad_join_os: 'CentOS'
 adcli::ad_join_os_version: '7'
 adcli::ad_join_os_service_pack: '6'
