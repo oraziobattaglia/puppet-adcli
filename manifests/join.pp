@@ -39,6 +39,7 @@ class adcli::join (
         $ad_join_service_names_command = join([" --service-name='", join($ad_join_service_names, "' --service-name='"), "'"], '')
     } else {
       $ad_join_service_names_command = ''
+    }
     if $ad_join_computer_name != undef {
       $ad_join_computer_name_command = " --computer-name='${ad_join_computer_name}'"
     } else {
