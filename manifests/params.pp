@@ -16,6 +16,7 @@ class adcli::params {
   $ad_join_ou                = undef
   $ad_join_domain_controller = undef
   $ad_join_service_names     = []
+  $ad_join_computer_name     = undef
   $ad_join_os                = undef
   $ad_join_os_version        = undef
   $ad_join_os_service_pack   = undef
