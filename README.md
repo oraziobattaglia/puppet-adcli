@@ -94,18 +94,16 @@ Default: undef
 Type: string
 Default: undef
 
-<<<<<<< HEAD
 `$ad_join_service_names`
 (optional) Specify additional kerberos service principals to be created on the account.
 Type: array
 Default: []
-=======
+
 `$ad_join_computer_name`
 (optional) Specify a custom computer name to use during the join operation.  This equates to the
 sAMAccountName property in Active Directory.
 Type: string
 Default: undef
->>>>>>> 8edab72979028d0ffa8ab192149429f6050cf08a
 
 `$ad_join_os`
 (optional) Populates the Active Directory value for Operating System Name.
