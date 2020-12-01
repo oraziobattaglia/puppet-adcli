@@ -41,6 +41,7 @@ class {'::adcli':
   ad_join_password          => 'secret',
   ad_join_ou                => 'ou=container,dc=example,dc=com',
   ad_join_domain_controller => 'dc01.example.com',
+  ad_join_service_names     => ['spn1', 'spn2']
   ad_join_computer_name     => 'TEST-CENTOS-76',
   ad_join_os                => 'CentOS',
   ad_join_os_version        => '7',
@@ -56,6 +57,9 @@ adcli::ad_join_username: 'username'
 adcli::ad_join_password: 'secret'
 adcli::ad_join_ou: 'ou=container,dc=example,dc=com'
 adcli::ad_join_domain_controller: 'dc01.example.com'
+adcli::ad_join_service_names:
+  - spn1
+  - spn2
 adcli::ad_join_computer_name: 'TEST-CENTOS-76'
 adcli::ad_join_os: 'CentOS'
 adcli::ad_join_os_version: '7'
@@ -89,6 +93,11 @@ Default: undef
 (optional) Specify which domain controller to use during the join operation.
 Type: string
 Default: undef
+
+`$ad_join_service_names`
+(optional) Specify additional kerberos service principals to be created on the account.
+Type: array
+Default: []
 
 `$ad_join_computer_name`
 (optional) Specify a custom computer name to use during the join operation.  This equates to the
