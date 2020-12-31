@@ -66,7 +66,7 @@ ${ad_join_computer_name_command} --login-user=\'${ad_join_username}\' --domain=\
 --stdin-password --verbose ${ad_join_os_command} ${ad_join_os_version_command} ${ad_join_os_service_pack_command} \
 ${ad_join_service_names_command}",
       logoutput => true,
-      creates   => '/etc/krb5.keytab',
+      unless    => '/usr/sbin/adcli testjoin',
     }
   }
 }
