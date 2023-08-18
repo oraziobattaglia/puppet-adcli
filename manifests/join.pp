@@ -32,8 +32,10 @@ class adcli::join (
   else {
     if $ad_join_domain_controller != undef {
       $ad_join_domain_controller_command = " --domain-controller='${ad_join_domain_controller}'"
+      $ad_testjoin_command = "-D ${ad_domain} -S ${ad_join_domain_controller}"
     } else {
       $ad_join_domain_controller_command = ''
+      $ad_testjoin_command = "-D ${ad_domain}"
     }
     if $ad_join_service_names != [] {
         $ad_join_service_names_command = join([" --service-name='", join($ad_join_service_names, "' --service-name='"), "'"], '')
@@ -66,7 +68,7 @@ ${ad_join_computer_name_command} --login-user=\'${ad_join_username}\' --domain=\
 --stdin-password --verbose ${ad_join_os_command} ${ad_join_os_version_command} ${ad_join_os_service_pack_command} \
 ${ad_join_service_names_command}",
       logoutput => true,
-      unless    => "/usr/sbin/adcli testjoin -D ${ad_domain}",
+      unless    => "/usr/sbin/adcli testjoin $ad_testjoin_command",
     }
   }
 }
